@@ -1,0 +1,58 @@
+var speedX = 0.25;
+var speedY = 0.25;
+var speedA = 0.2;
+var speedB = 0.3;
+var speedC = 0.5;
+var speedD = 0.5;
+var speedE = 0.3; 
+
+Hatch.createTimer('clockTimer', 10, function () {
+    if (Airplane.getX() >= -30 && Airplane.getX() < 30) {
+        Airplane_takeoff1.stopSound()
+        Airplane_runway1.playSound()
+        Airplane.setX(Airplane.getX() + speedX);
+        Airplane.setRotationX(0)
+    }
+    else if (Airplane.getX() >= 30 && Airplane.getX() < 90) {
+        Airplane_runway1.stopSound()
+        Airplane_takeoff1.playSound()
+        Airplane.setX(Airplane.getX() + speedX);
+        Airplane.setY(Airplane.getY() + speedY);
+        Airplane.setRotationX(-30)
+    }
+    else if (Airplane.getX() == 90) {
+        Airplane.setX(-90);
+    }
+    else if (Airplane.getX() >= -90 && Airplane.getX() < -30) {
+        Airplane_landing1.playSound();
+        Airplane.setX(Airplane.getX() + speedX);
+        Airplane.setY(Airplane.getY() - speedY);
+        Airplane.setRotationX(-15);
+    }
+    CarA.setX(CarA.getX() + speedA);
+    CarB.setX(CarB.getX() + speedB);
+    CarC.setX(CarC.getX() + speedC);
+    CarD.setX(CarD.getX() + speedD);
+    CarE.setX(CarE.getX() + speedE);
+    
+    if (CarA.getX() > 80) {
+        CarA.setX(-20);
+    }
+    if (CarB.getX() > 80) {
+    CarB.setX(-30);
+    }
+    if (CarC.getX() > 80) {
+    CarC.setX(-30);
+    }
+    if (CarD.getX() > 80) {
+    CarD.setX(-30);
+    }
+    if (CarE.getX() > 80) {
+    CarE.setX(-30);
+    }
+
+});
+
+
+
+
