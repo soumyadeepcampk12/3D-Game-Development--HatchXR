@@ -1,6 +1,6 @@
 # 3D-Game-Development--HatchXR
 The folder consists of  Games and Virtual Environments created using the Hatch XR platform of CampK12. The list and the links to them are listed below:-
-1. Airport Scene:-https://play.hatchxr.com/@SoumyadeepDasNaN1/Airport-Scene
+1. Airport Scene:- https://play.hatchxr.com/@SoumyadeepDasNaN1/Airport-Scene
 2. Roller Coaster
 3. Amusement Park
 4. Drone Project
